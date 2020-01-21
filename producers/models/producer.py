@@ -82,9 +82,9 @@ class Producer:
         for _ ,future in futures.items():
             try:
                 future.result()
-                logger.info("{self.topic_name} topic created successfully!")
+                logger.info(f"{self.topic_name} topic created successfully!")
             except Exception as e:
-                logger.info("failed to create the topic {self.topic_name} : {e}")
+                logger.info(f"failed to create the topic {self.topic_name} : {e}")
         
 
     #def time_millis(self):
