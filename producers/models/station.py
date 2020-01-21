@@ -37,7 +37,7 @@ class Station(Producer):
         # replicas
         #
         #
-        topic_name = "com.udacity.cta.station.arrival", 
+        topic_name = "com.udacity.cta.station.arrival"
         super().__init__(
             topic_name,
             key_schema=Station.key_schema,

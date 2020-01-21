@@ -56,7 +56,7 @@ class Turnstile(Producer):
         #
         #
         try:
-            for num in num_entries:
+            for _ in range(num_entries):
                 self.producer.produce(
                     topic = self.topic_name,
                     key = {"timestamp":self.time_millis()},
@@ -67,5 +67,5 @@ class Turnstile(Producer):
                     },
                 )
         except Exception as e:
-            logger.info('turnstile failed to write to the topic {self.topic_name} due to {e}')
+            logger.info(f"turnstile failed to write to the topic {self.topic_name} due to {e}")
         
