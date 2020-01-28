@@ -37,7 +37,7 @@ class Weather(Producer):
         #
         #
         super().__init__(
-            "com.udacity.cta.station.weather", 
+            "org.chicago.cta.weather.v1", #"com.udacity.cta.station.weather", 
             key_schema=Weather.key_schema,
             value_schema=Weather.value_schema,
             num_partitions=1,
